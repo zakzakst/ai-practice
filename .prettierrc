@@ -17,6 +17,17 @@
   "importOrderSortSpecifiers": true,
   "plugins": [
     "@trivago/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss"
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-astro"
+  ],
+  "tabWidth": 2,
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro"
+      }
+    }
   ]
 }
