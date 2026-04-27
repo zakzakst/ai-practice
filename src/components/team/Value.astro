@@ -1,13 +1,44 @@
 ---
 import "@styles/team/value.css";
+import Heading from "@components/common/Heading.astro";
+
+type Item = {
+  num: string;
+  name: string;
+  text: string;
+};
+const items: Item[] = [
+  {
+    num: "01",
+    name: "基本をおろそかにしない",
+    text: "派手なプレーだけでなく、パス、フットワーク、守備、判断など、試合で必要になる土台を毎日の練習で積み上げています。",
+  },
+  {
+    num: "02",
+    name: "声でつながる",
+    text: "声を出して仲間を支え、状況を共有し、チーム全体で流れをつくることを大切にしています。",
+  },
+  {
+    num: "03",
+    name: "役割をやり切る",
+    text: "得点だけでなく、守備、リバウンド、声かけ、つなぎ役など、それぞれの役割を全うすることを重視しています。",
+  },
+];
 ---
 
-<div>value</div>
-
-<!--
-## セクション：WHAT WE VALUE（大切にしていること）
-- 大切にしていること
-- 01 基本をおろそかにしない: 派手なプレーだけでなく、パス、フットワーク、守備、判断など、試合で必要になる土台を毎日の練習で積み上げています。
-- 02 声でつながる: 声を出して仲間を支え、状況を共有し、チーム全体で流れをつくることを大切にしています。
-- 03 役割をやり切る: 得点だけでなく、守備、リバウンド、声かけ、つなぎ役など、それぞれの役割を全うすることを重視しています。
--->
+<section>
+  <Heading>大切にしていること</Heading>
+  <ul class="mt-4 team-value-items">
+    {
+      items.map((item) => (
+        <li class="team-value-item">
+          <div class="team-value-item__title">
+            <div class="team-value-item__title-num">{item.num}</div>
+            <div class="team-value-item__title-name">{item.name}</div>
+          </div>
+          <div class="team-value-item__text">{item.text}</div>
+        </li>
+      ))
+    }
+  </ul>
+</section>

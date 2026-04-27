@@ -1,11 +1,23 @@
 ---
 import "@styles/common/join-us.css";
+import Button from "@components/common/Button.astro";
+import { getBasePath } from "@lib/utils";
 ---
 
-<div>join us</div>
-<!--
-## コンタクト / フッター
-- 見学・体験はいつでも歓迎しています。
-- チームの雰囲気を肌で感じてください。
-- [見学・体験のお申し込みはこちら]
--->
+<div class="join-us">
+  <div class="join-us__inner">
+    <div class="join-us__content">
+      <p class="join-us__content-text">見学・体験はいつでも歓迎しています。</p>
+      <p class="join-us__content-text">チームの雰囲気を肌で感じてください。</p>
+      <p class="join-us__content-note">
+        ※お申し込みはGoogleフォームから受け付けています。
+      </p>
+      <div class="mt-4">
+        <Button href={getBasePath("/contact")}
+          >見学・体験のお申し込みはこちら</Button
+        >
+      </div>
+    </div>
+    <div class="join-us__bg"></div>
+  </div>
+</div>

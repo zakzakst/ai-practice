@@ -1,0 +1,36 @@
+.team-value-items {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  row-gap: 12px;
+}
+
+.team-value-item {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 2;
+  align-items: center;
+}
+
+.team-value-item__title {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  font-size: 20px;
+  padding-right: 24px;
+  gap: 12px;
+  align-items: center;
+}
+
+.team-value-item__title-num {
+  width: 36px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--primary);
+  color: var(--white);
+  line-height: 1;
+  display: grid;
+  place-content: center;
+}
+
+.team-value-item__text {
+  padding-left: 24px;
+  border-left: 1px solid #888;
+}

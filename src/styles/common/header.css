@@ -2,6 +2,7 @@
   background-color: var(--white);
   position: sticky;
   z-index: var(--z-header);
+  top: 0;
 }
 
 .header-link {

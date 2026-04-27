@@ -1,0 +1,29 @@
+---
+import "@styles/contact/for-you.css";
+import Heading from "@components/common/Heading.astro";
+
+type Item = {
+  text: string;
+};
+const items: Item[] = [
+  {
+    text: "バスケットボールが好きな人",
+  },
+  {
+    text: "高校で何かに本気で取り組みたい人",
+  },
+  {
+    text: "仲間と一緒に成長したい人",
+  },
+  {
+    text: "経験の有無に関わらず挑戦したい人",
+  },
+];
+---
+
+<section>
+  <Heading>こんな人を待っています</Heading>
+  <ul class="mt-4">
+    {items.map((item) => <li>{item.text}</li>)}
+  </ul>
+</section>

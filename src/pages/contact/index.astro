@@ -1,0 +1,37 @@
+---
+import Layout from "@layouts/Default.astro";
+import Hero from "@components/common/Hero.astro";
+import Container from "@components/common/Container.astro";
+import JoinUs from "@components/common/JoinUs.astro";
+
+import ForYou from "@components/contact/ForYou.astro";
+import Visit from "@components/contact/Visit.astro";
+import Flow from "@components/contact/Flow.astro";
+import Faq from "@components/contact/Faq.astro";
+---
+
+<Layout
+  title="入部案内・お問い合わせページ"
+  description="これは入部案内・お問い合わせページです"
+>
+  <Hero
+    title="入部案内・お問い合わせ"
+    titleEn="CONTACT"
+    description="私たちと一緒に、目標に向かって挑戦しませんか？"
+  />
+  <div class="py-12">
+    <Container className="grid grid-cols-2 gap-12">
+      <ForYou />
+      <Visit />
+    </Container>
+    <Container className="mt-12">
+      <Flow />
+    </Container>
+    <Container className="mt-12">
+      <Faq />
+    </Container>
+    <Container className="mt-12">
+      <JoinUs />
+    </Container>
+  </div>
+</Layout>
