@@ -1,0 +1,27 @@
+---
+import "@styles/common/hero.css";
+
+interface Props {
+  title: string;
+  titleEn: string;
+  description: string;
+  // TODO: 背景画像のパス
+  // bgPath: string;
+}
+const { title, titleEn, description } = Astro.props;
+---
+
+<div class="hero">
+  <div class="container mx-auto px-4 h-full">
+    <div class="hero-content">
+      <hgroup>
+        <p class="hero-content__sub-title">{titleEn}</p>
+        <h1 class="hero-content__title">{title}</h1>
+      </hgroup>
+      <p class="hero-content__description">{description}</p>
+    </div>
+  </div>
+  <div class="hero-bg">
+    <img src="https://placehold.jp/2000x480.png" alt="" loading="lazy" />
+  </div>
+</div>

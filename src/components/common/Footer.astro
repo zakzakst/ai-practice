@@ -1,1 +1,68 @@
-<footer>フッター</footer>
+---
+import "@styles/common/footer.css";
+import { getBasePath } from "@lib/utils";
+type Item = {
+  id: string;
+  label: string;
+  labelEn: string;
+};
+const items: Item[] = [
+  {
+    id: "team",
+    label: "チーム紹介",
+    labelEn: "TEAM",
+  },
+  {
+    id: "activate",
+    label: "活動情報",
+    labelEn: "ACTIVATE",
+  },
+  {
+    id: "member",
+    label: "メンバー",
+    labelEn: "MEMBER",
+  },
+  {
+    id: "news",
+    label: "ニュース・実績",
+    labelEn: "NEWS",
+  },
+  {
+    id: "contact",
+    label: "入部案内・お問い合わせ",
+    labelEn: "CONTACT",
+  },
+];
+---
+
+<footer class="footer">
+  <div class="container mx-auto p-4">
+    <div class="grid gap-4 items-center grid-cols-[1fr_max-content]">
+      <div class="footer-info">
+        <div class="footer-info__logo">CHIMURA</div>
+        <div>
+          <p>千村高校 バスケットボール部</p>
+          <p class="footer-info__name-en">
+            CHIMURA HIGH SCHOOL BASKETBALL CLUB
+          </p>
+        </div>
+      </div>
+      <nav>
+        <ul class="flex gap-4 items-center">
+          {
+            items.map((item) => (
+              <li>
+                <a href={getBasePath(`/${item.id}`)}>{item.labelEn}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </div>
+    <div class="mt-2">
+      <p class="footer-copy">
+        © CHIMURA HIGH SCHOOL BASKETBALL CLUB All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>

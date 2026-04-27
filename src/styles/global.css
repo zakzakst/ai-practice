@@ -2,10 +2,21 @@
 
 @layer base {
   :root {
-    --primary: #f00;
+    --white: #fff;
+    --black: #1a1a1a;
+    --primary: #d35400;
+    --secondary: #1a1a1a;
+    --z-header: 100;
   }
 }
 
+html,
+body {
+  color: var(--black);
+  background-color: var(--white);
+}
+
+/* NOTE: tailwindに反映させる場合の書き方（今回はgridなどレイアウト周りのユーティリティスタイルとして利用するので不要だが、知識としてメモ） */
 /* @theme {
   --text-color-primary: var(--primary);
 } */

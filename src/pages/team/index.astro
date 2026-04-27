@@ -1,7 +1,23 @@
 ---
 import Layout from "@layouts/Default.astro";
+import Hero from "@components/common/Hero.astro";
+import JoinUs from "@components/common/JoinUs.astro";
+
+import Lead from "@components/team/Lead.astro";
+import Feature from "@components/team/Feature.astro";
+import Value from "@components/team/Value.astro";
+import ForYou from "@components/team/ForYou.astro";
 ---
 
 <Layout title="チーム紹介ページ" description="これはチーム紹介ページです">
-  <div class="font-bold text-2xl text-primary">チーム紹介ページ</div>
+  <Hero
+    title="チーム紹介"
+    titleEn="TEAM"
+    description="チームの考え方や雰囲気をお伝えします"
+  />
+  <Lead />
+  <Feature />
+  <Value />
+  <ForYou />
+  <JoinUs />
 </Layout>

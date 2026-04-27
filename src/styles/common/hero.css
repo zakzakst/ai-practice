@@ -1,0 +1,43 @@
+.hero {
+  position: relative;
+  height: 240px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-content: center start;
+  height: 100%;
+}
+
+.hero-content__sub-title {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.hero-content__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.hero-content__description {
+  margin-top: 4px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(135deg, var(--white) 25%, transparent);
+    inset: 0;
+  }
+}
