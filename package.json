@@ -13,7 +13,9 @@
     "lint:prettier": "prettier . --write"
   },
   "dependencies": {
-    "astro": "^6.1.9"
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^6.1.9",
+    "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
