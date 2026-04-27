@@ -1,6 +1,7 @@
 ---
 import Layout from "@layouts/Default.astro";
 import Hero from "@components/common/Hero.astro";
+import Container from "@components/common/Container.astro";
 import JoinUs from "@components/common/JoinUs.astro";
 
 import Lead from "@components/team/Lead.astro";
@@ -16,14 +17,14 @@ import Value from "@components/team/Value.astro";
   />
   <div class="py-12">
     <Lead />
-    <div class="mt-12">
+    <Container className="mt-12">
       <Feature />
-    </div>
-    <div class="mt-12">
+    </Container>
+    <Container className="mt-12">
       <Value />
-    </div>
-    <div class="mt-12">
+    </Container>
+    <Container className="mt-12">
       <JoinUs />
-    </div>
+    </Container>
   </div>
 </Layout>

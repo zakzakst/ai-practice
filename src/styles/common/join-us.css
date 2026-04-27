@@ -1,0 +1,34 @@
+.join-us__inner {
+  position: relative;
+  background-color: var(--black);
+  color: var(--white);
+  background-image: url(https://placehold.jp/160x160.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.join-us__content {
+  padding: 24px;
+  width: 50%;
+  min-height: 240px;
+  display: grid;
+  place-content: center start;
+  position: relative;
+  z-index: 1;
+}
+
+.join-us__content-text {
+  font-size: 20px;
+}
+
+.join-us__content-note {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.join-us__bg {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(120deg, var(--black) 50%, transparent 50%);
+  opacity: 0.8;
+}

@@ -1,6 +1,5 @@
 ---
 import "@styles/team/feature.css";
-import Container from "@components/common/Container.astro";
 import Heading from "@components/common/Heading.astro";
 
 type Item = {
@@ -28,24 +27,18 @@ const items: Item[] = [
 ---
 
 <section>
-  <Container>
-    <Heading>チームの特徴</Heading>
-    <ul class="grid grid-cols-4 gap-4 mt-4">
-      {
-        items.map((item) => (
-          <li class="team-feature-item">
-            <div class="team-feature-item__img">
-              <img
-                src="https://placehold.jp/160x160.png"
-                alt=""
-                loading="lazy"
-              />
-            </div>
-            <p class="team-feature-item__name">{item.name}</p>
-            <p class="team-feature-item__text">{item.text}</p>
-          </li>
-        ))
-      }
-    </ul>
-  </Container>
+  <Heading>チームの特徴</Heading>
+  <ul class="grid grid-cols-4 gap-4 mt-4">
+    {
+      items.map((item) => (
+        <li class="team-feature-item">
+          <div class="team-feature-item__img">
+            <img src="https://placehold.jp/160x160.png" alt="" loading="lazy" />
+          </div>
+          <p class="team-feature-item__name">{item.name}</p>
+          <p class="team-feature-item__text">{item.text}</p>
+        </li>
+      ))
+    }
+  </ul>
 </section>

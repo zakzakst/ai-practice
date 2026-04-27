@@ -1,6 +1,5 @@
 ---
 import "@styles/team/value.css";
-import Container from "@components/common/Container.astro";
 import Heading from "@components/common/Heading.astro";
 
 type Item = {
@@ -28,20 +27,18 @@ const items: Item[] = [
 ---
 
 <section>
-  <Container>
-    <Heading>大切にしていること</Heading>
-    <ul class="mt-4 team-value-items">
-      {
-        items.map((item) => (
-          <li class="team-value-item">
-            <div class="team-value-item__title">
-              <div class="team-value-item__title-num">{item.num}</div>
-              <div class="team-value-item__title-name">{item.name}</div>
-            </div>
-            <div class="team-value-item__text">{item.text}</div>
-          </li>
-        ))
-      }
-    </ul>
-  </Container>
+  <Heading>大切にしていること</Heading>
+  <ul class="mt-4 team-value-items">
+    {
+      items.map((item) => (
+        <li class="team-value-item">
+          <div class="team-value-item__title">
+            <div class="team-value-item__title-num">{item.num}</div>
+            <div class="team-value-item__title-name">{item.name}</div>
+          </div>
+          <div class="team-value-item__text">{item.text}</div>
+        </li>
+      ))
+    }
+  </ul>
 </section>

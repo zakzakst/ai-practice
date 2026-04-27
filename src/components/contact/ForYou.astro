@@ -1,5 +1,6 @@
 ---
 import "@styles/contact/for-you.css";
+import Heading from "@components/common/Heading.astro";
 
 type Item = {
   text: string;
@@ -21,7 +22,7 @@ const items: Item[] = [
 ---
 
 <section>
-  <h3 class="contact-for-you__heading">こんな人に向いています</h3>
+  <Heading>こんな人を待っています</Heading>
   <ul class="mt-4">
     {items.map((item) => <li>{item.text}</li>)}
   </ul>

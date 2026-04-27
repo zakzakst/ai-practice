@@ -1,0 +1,28 @@
+.button {
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  background-color: var(--primary);
+  padding: 16px 24px;
+  font-size: 20px;
+  display: inline-block;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    inset-block: 0;
+    width: 16px;
+    background-color: var(--black);
+    display: block;
+  }
+  &::before {
+    left: 0;
+    transform-origin: left top;
+    transform: skewX(-30deg);
+  }
+  &::after {
+    right: 0;
+    transform-origin: right bottom;
+    transform: skewX(-30deg);
+  }
+}
