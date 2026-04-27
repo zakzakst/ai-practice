@@ -6,7 +6,6 @@ import JoinUs from "@components/common/JoinUs.astro";
 import Lead from "@components/team/Lead.astro";
 import Feature from "@components/team/Feature.astro";
 import Value from "@components/team/Value.astro";
-import ForYou from "@components/team/ForYou.astro";
 ---
 
 <Layout title="チーム紹介ページ" description="これはチーム紹介ページです">
@@ -15,9 +14,16 @@ import ForYou from "@components/team/ForYou.astro";
     titleEn="TEAM"
     description="チームの考え方や雰囲気をお伝えします"
   />
-  <Lead />
-  <Feature />
-  <Value />
-  <ForYou />
-  <JoinUs />
+  <div class="py-12">
+    <Lead />
+    <div class="mt-12">
+      <Feature />
+    </div>
+    <div class="mt-12">
+      <Value />
+    </div>
+    <div class="mt-12">
+      <JoinUs />
+    </div>
+  </div>
 </Layout>
