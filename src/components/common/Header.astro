@@ -1,0 +1,43 @@
+---
+type Item = {
+  id: string;
+  label: string;
+  labelEn: string;
+};
+const items: Item[] = [
+  {
+    id: "team",
+    label: "チーム紹介",
+    labelEn: "TEAM",
+  },
+  {
+    id: "activate",
+    label: "活動情報",
+    labelEn: "ACTIVATE",
+  },
+  {
+    id: "member",
+    label: "メンバー",
+    labelEn: "MEMBER",
+  },
+  {
+    id: "news",
+    label: "ニュース・実績",
+    labelEn: "NEWS",
+  },
+];
+---
+
+<header>
+  <nav>
+    <ul>
+      {
+        items.map((item) => (
+          <li>
+            <a href={`/${item.id}`}>{item.labelEn}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

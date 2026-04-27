@@ -1,0 +1,10 @@
+plan/
+.vscode/
+.prettierrc
+ai-practice.code-workspace
+astro.config.mjs
+package-lock.json
+package.json
+README.md
+tsconfig.json
+dist
