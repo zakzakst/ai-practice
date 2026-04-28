@@ -1,0 +1,91 @@
+.activities-schedule-items {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  direction: rtl;
+  gap: 16px 64px;
+  padding-bottom: 40px;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    bottom: 2px;
+    display: block;
+    width: 2px;
+    background-color: var(--black);
+    margin-inline: auto;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    display: block;
+    width: 20px;
+    height: 16px;
+    background-color: var(--black);
+    margin-inline: auto;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+}
+
+.activities-schedule-item {
+  position: relative;
+  direction: ltr;
+  display: flex;
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    margin-block: auto;
+    height: 1px;
+    width: 32px;
+    background-color: var(--black);
+  }
+  &:nth-child(odd) {
+    &::after {
+      right: 100%;
+    }
+  }
+  &:nth-child(2n) {
+    top: 40px;
+    justify-content: end;
+    align-items: center;
+    &::after {
+      left: 100%;
+    }
+  }
+}
+
+.activities-schedule-item__inner {
+  padding: 8px;
+  border-radius: 9999px;
+  border: 1px solid #888;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+:where(.activities-schedule-item:nth-child(odd)) {
+  .activities-schedule-item__inner {
+    padding-right: 24px;
+  }
+}
+
+:where(.activities-schedule-item:nth-child(even)) {
+  .activities-schedule-item__inner {
+    flex-direction: row-reverse;
+    padding-left: 24px;
+  }
+}
+
+.activities-schedule-item__name {
+  width: 48px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: var(--black);
+  display: grid;
+  place-content: center;
+  color: var(--white);
+  flex-shrink: 0;
+}

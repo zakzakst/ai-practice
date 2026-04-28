@@ -61,12 +61,14 @@ const items: Item[] = [
 <section>
   <Heading>年間スケジュール</Heading>
   <div class="mt-4">
-    <ul>
+    <ul class="activities-schedule-items">
       {
         items.map((item) => (
-          <li>
-            {item.name}
-            {item.text}
+          <li class="activities-schedule-item">
+            <div class="activities-schedule-item__inner">
+              <div class="activities-schedule-item__name">{item.name}</div>
+              <div class="activities-schedule-item__text">{item.text}</div>
+            </div>
           </li>
         ))
       }
