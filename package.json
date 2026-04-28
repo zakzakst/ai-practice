@@ -13,6 +13,7 @@
     "lint:prettier": "prettier . --write",
     "hg:component": "hygen component with-prompt",
     "style-lint": "stylelint --fix ./src/styles/**/*.css",
+    "htmlhint": "htmlhint ./dist/**/*.html",
     "deploy": "gh-pages -d dist --nojekyll"
   },
   "dependencies": {
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "gh-pages": "^6.3.0",
+    "htmlhint": "^1.9.2",
     "hygen": "^6.2.11",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
