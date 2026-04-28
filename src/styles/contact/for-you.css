@@ -1,0 +1,35 @@
+.contact-for-you-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-for-you-item {
+  position: relative;
+  padding-left: 28px;
+  & > i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid var(--primary);
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      inset: 0;
+      right: 50%;
+      border-right: 2px solid var(--primary);
+      border-bottom: 2px solid var(--primary);
+      transform: translate(60%, -30%) rotate(45deg);
+    }
+  }
+}

@@ -23,7 +23,16 @@ const items: Item[] = [
 
 <section>
   <Heading>こんな人を待っています</Heading>
-  <ul class="mt-4">
-    {items.map((item) => <li>{item.text}</li>)}
-  </ul>
+  <div class="mt-4">
+    <ul class="contact-for-you-items">
+      {
+        items.map((item) => (
+          <li class="contact-for-you-item">
+            <i />
+            {item.text}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </section>

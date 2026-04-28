@@ -1,0 +1,66 @@
+.contact-flow-items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 48px;
+}
+
+.contact-flow-item {
+  position: relative;
+  padding-top: 12px;
+  & + .contact-flow-item::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 24px;
+    background-color: var(--primary);
+    top: 60px;
+    left: -32px;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+  }
+}
+
+.contact-flow-item__head {
+  position: relative;
+  background-color: #eee;
+  width: 120px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  margin-inline: auto;
+  display: grid;
+  place-content: center;
+}
+
+.contact-flow-item__num {
+  position: absolute;
+  inset-inline: 0;
+  top: -12px;
+  display: grid;
+  place-content: center;
+  width: 32px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: var(--primary);
+  color: var(--white);
+  margin-inline: auto;
+  font-weight: bold;
+}
+
+.contact-flow-item__img {
+  width: 60px;
+  aspect-ratio: 1 / 1;
+}
+
+.contact-flow-item__content {
+  position: relative;
+  margin-top: -16px;
+  text-align: center;
+}
+
+.contact-flow-item__name {
+  font-weight: bold;
+}
+
+.contact-flow-item__text {
+  font-size: 14px;
+}
