@@ -1,17 +1,18 @@
 .member-players-item {
   position: relative;
   overflow: hidden;
+
   &::before {
-    content: "";
     position: absolute;
     top: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     display: block;
     width: 16px;
+    content: "";
     background-color: var(--primary);
-    transform-origin: bottom right;
     transform: skew(-30deg);
+    transform-origin: bottom right;
   }
 }
 
@@ -27,21 +28,21 @@
 }
 
 .member-players-item__data {
-  margin-top: 12px;
   padding-top: 12px;
+  margin-top: 12px;
   border-top: 1px dotted #888;
 }
 
 .member-players-item__play-heading {
+  margin-top: 12px;
   font-weight: bold;
   color: var(--primary);
-  margin-top: 12px;
 }
 
 .member-players-item__text {
-  margin-top: 12px;
-  padding: 12px;
-  background-color: #f8f8f8;
   height: 100%;
+  padding: 12px;
+  margin-top: 12px;
   font-size: 14px;
+  background-color: #f8f8f8;
 }

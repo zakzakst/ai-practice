@@ -1,8 +1,8 @@
 .header {
-  background-color: var(--white);
   position: sticky;
-  z-index: var(--z-header);
   top: 0;
+  z-index: var(--z-header);
+  background-color: var(--white);
 }
 
 .header-link {
@@ -13,14 +13,14 @@
 }
 
 .header-link__logo {
-  background-color: var(--primary);
-  font-size: 10px;
-  aspect-ratio: 1 / 1;
-  padding: 2px;
   display: grid;
   place-content: center;
+  aspect-ratio: 1 / 1;
+  padding: 2px;
+  font-size: 10px;
   line-height: 1;
   color: var(--white);
+  background-color: var(--primary);
 }
 
 .header-link__name {
@@ -45,11 +45,12 @@
 .header-nav__link {
   display: grid;
   place-content: center;
-  padding-inline: 12px;
   height: 100%;
+  padding-inline: 12px;
   font-weight: bold;
+
   &.--contact {
-    background-color: var(--primary);
     color: var(--white);
+    background-color: var(--primary);
   }
 }

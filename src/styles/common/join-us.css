@@ -1,20 +1,20 @@
 .join-us__inner {
   position: relative;
-  background-color: var(--black);
   color: var(--white);
-  background-image: url(https://placehold.jp/160x160.png);
-  background-size: cover;
+  background-color: var(--black);
+  background-image: url("https://placehold.jp/160x160.png");
   background-position: center;
+  background-size: cover;
 }
 
 .join-us__content {
-  padding: 24px;
-  width: 50%;
-  min-height: 240px;
-  display: grid;
-  place-content: center start;
   position: relative;
   z-index: 1;
+  display: grid;
+  place-content: center start;
+  width: 50%;
+  min-height: 240px;
+  padding: 24px;
 }
 
 .join-us__content-text {

@@ -1,6 +1,6 @@
 .footer {
-  background-color: var(--secondary);
   color: var(--white);
+  background-color: var(--secondary);
 }
 
 .footer-info {
@@ -10,13 +10,13 @@
 }
 
 .footer-info__logo {
-  background-color: var(--primary);
-  font-size: 10px;
-  aspect-ratio: 1 / 1;
-  padding: 2px;
   display: grid;
   place-content: center;
+  aspect-ratio: 1 / 1;
+  padding: 2px;
+  font-size: 10px;
   line-height: 1;
+  background-color: var(--primary);
 }
 
 .footer-info__name-en {

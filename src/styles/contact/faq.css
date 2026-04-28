@@ -5,8 +5,8 @@
 }
 
 .contact-faq-item {
-  border: 1px solid #eee;
   padding: 8px 16px;
+  border: 1px solid #eee;
   border-radius: 8px;
 }
 
@@ -20,10 +20,10 @@
   place-content: center;
   width: 32px;
   aspect-ratio: 1 / 1;
-  background-color: var(--black);
-  color: var(--white);
   font-weight: bold;
   line-height: 1;
+  color: var(--white);
+  background-color: var(--black);
 }
 
 .contact-faq-item__question-text {
@@ -32,9 +32,9 @@
 }
 
 .contact-faq-item__answer {
-  padding-top: 12px;
   display: grid;
   grid-template-columns: 48px 1fr;
+  padding-top: 12px;
 }
 
 .contact-faq-item__answer-icon {
@@ -42,10 +42,10 @@
   place-content: center;
   width: 32px;
   aspect-ratio: 1 / 1;
-  background-color: var(--primary);
-  color: var(--white);
   font-weight: bold;
   line-height: 1;
+  color: var(--white);
+  background-color: var(--primary);
 }
 
 .contact-faq-item__answer-text {
