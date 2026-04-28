@@ -1,0 +1,16 @@
+---
+interface Props {
+  heroImage?: string;
+}
+const { heroImage } = Astro.props;
+---
+
+<div>
+  <!-- TODO: 画角制御 -->
+  <img
+    src={heroImage || "https://placehold.jp/800x240.png"}
+    alt=""
+    loading="lazy"
+    class="w-full"
+  />
+</div>
