@@ -12,6 +12,7 @@
     "astro": "astro",
     "lint:prettier": "prettier . --write",
     "hg:component": "hygen component with-prompt",
+    "style-lint": "stylelint --fix ./src/styles/**/*.css",
     "deploy": "gh-pages -d dist --nojekyll"
   },
   "dependencies": {
@@ -26,6 +27,9 @@
     "hygen": "^6.2.11",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.7.3"
+    "prettier-plugin-tailwindcss": "^0.7.3",
+    "stylelint": "^17.9.1",
+    "stylelint-config-recess-order": "^7.7.0",
+    "stylelint-config-standard": "^40.0.0"
   }
 }

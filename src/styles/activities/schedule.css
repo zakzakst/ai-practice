@@ -2,55 +2,61 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  direction: rtl;
   gap: 16px 64px;
   padding-bottom: 40px;
+  direction: rtl;
+
   &::before {
-    content: "";
     position: absolute;
     inset: 0;
     bottom: 2px;
     display: block;
     width: 2px;
-    background-color: var(--black);
     margin-inline: auto;
-  }
-  &::after {
     content: "";
+    background-color: var(--black);
+  }
+
+  &::after {
     position: absolute;
     inset-inline: 0;
     bottom: 0;
     display: block;
     width: 20px;
     height: 16px;
-    background-color: var(--black);
     margin-inline: auto;
+    content: "";
+    background-color: var(--black);
     clip-path: polygon(0 0, 100% 0, 50% 100%);
   }
 }
 
 .activities-schedule-item {
   position: relative;
-  direction: ltr;
   display: flex;
+  direction: ltr;
+
   &::after {
-    content: "";
     position: absolute;
     inset-block: 0;
-    margin-block: auto;
-    height: 1px;
     width: 32px;
+    height: 1px;
+    margin-block: auto;
+    content: "";
     background-color: var(--black);
   }
+
   &:nth-child(odd) {
     &::after {
       right: 100%;
     }
   }
+
   &:nth-child(2n) {
     top: 40px;
-    justify-content: end;
     align-items: center;
+    justify-content: end;
+
     &::after {
       left: 100%;
     }
@@ -58,12 +64,12 @@
 }
 
 .activities-schedule-item__inner {
-  padding: 8px;
-  border-radius: 9999px;
-  border: 1px solid #888;
   display: flex;
   gap: 16px;
   align-items: center;
+  padding: 8px;
+  border: 1px solid #888;
+  border-radius: 9999px;
 }
 
 :where(.activities-schedule-item:nth-child(odd)) {
@@ -80,12 +86,12 @@
 }
 
 .activities-schedule-item__name {
+  display: grid;
+  flex-shrink: 0;
+  place-content: center;
   width: 48px;
   aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  background-color: var(--black);
-  display: grid;
-  place-content: center;
   color: var(--white);
-  flex-shrink: 0;
+  background-color: var(--black);
+  border-radius: 50%;
 }
