@@ -1,0 +1,75 @@
+---
+import "@styles/activities/schedule.css";
+import Heading from "@components/common/Heading.astro";
+
+type Item = {
+  name: string;
+  text: string;
+};
+const items: Item[] = [
+  {
+    name: "4月",
+    text: "新入生勧誘、基礎体力測定、部内ミーティング",
+  },
+  {
+    name: "5月",
+    text: "新入部員の基本練習、地区交流試合",
+  },
+  {
+    name: "6月",
+    text: "インターハイ予選",
+  },
+  {
+    name: "7月",
+    text: "進路面談、夏休み前の強化期間",
+  },
+  {
+    name: "8月",
+    text: "夏季合宿、練習試合集中月間",
+  },
+  {
+    name: "9月",
+    text: "文化祭との両立、フィジカル強化",
+  },
+  {
+    name: "10月",
+    text: "ウィンターカップ県予選",
+  },
+  {
+    name: "11月",
+    text: "新チーム再編、基礎練習の見直し",
+  },
+  {
+    name: "12月",
+    text: "他校合同練習、校内トレーニング中心",
+  },
+  {
+    name: "1月",
+    text: "新人戦地区予選",
+  },
+  {
+    name: "2月",
+    text: "学年末試験に合わせた短時間練習",
+  },
+  {
+    name: "3月",
+    text: "卒業生送別試合、春の遠征準備",
+  },
+];
+---
+
+<section>
+  <Heading>年間スケジュール</Heading>
+  <div class="mt-4">
+    <ul>
+      {
+        items.map((item) => (
+          <li>
+            {item.name}
+            {item.text}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

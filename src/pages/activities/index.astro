@@ -1,0 +1,34 @@
+---
+import Layout from "@layouts/Default.astro";
+import Hero from "@components/common/Hero.astro";
+import Container from "@components/common/Container.astro";
+import JoinUs from "@components/common/JoinUs.astro";
+
+import Info from "@components/activities/Info.astro";
+import DateTime from "@components/activities/DateTime.astro";
+import Schedule from "@components/activities/Schedule.astro";
+import Gallery from "@components/activities/Gallery.astro";
+---
+
+<Layout title="活動情報ページ" description="これは活動情報ページです">
+  <Hero
+    title="活動情報"
+    titleEn="ACTIVITIES"
+    description="活動内容や年間スケジュールをご紹介します"
+  />
+  <div class="py-12">
+    <Container className="grid grid-cols-2 gap-12">
+      <Info />
+      <DateTime />
+    </Container>
+    <Container className="mt-12">
+      <Schedule />
+    </Container>
+    <Container className="mt-12">
+      <Gallery />
+    </Container>
+    <Container className="mt-12">
+      <JoinUs />
+    </Container>
+  </div>
+</Layout>
