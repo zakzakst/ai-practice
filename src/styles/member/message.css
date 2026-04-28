@@ -1,0 +1,21 @@
+.member-message__wrapper {
+  position: relative;
+  padding-block: 48px;
+  &::before,
+  &::after {
+    position: absolute;
+    font-size: 72px;
+    color: #888;
+    line-height: 1;
+  }
+  &::before {
+    content: "“";
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: "”";
+    bottom: -24px;
+    right: 0;
+  }
+}

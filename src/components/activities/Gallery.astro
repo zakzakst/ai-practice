@@ -1,0 +1,41 @@
+---
+import "@styles/activities/gallery.css";
+import Heading from "@components/common/Heading.astro";
+
+type Item = {
+  caption: string;
+};
+const items: Item[] = [
+  {
+    caption: "練習メニューの様子",
+  },
+  {
+    caption: "体育館での活動風景",
+  },
+  {
+    caption: "練習試合の様子",
+  },
+];
+---
+
+<section>
+  <Heading>活動風景</Heading>
+  <div class="mt-4">
+    <ul class="grid grid-cols-3 gap-6">
+      {
+        items.map((item) => (
+          <li>
+            <div>
+              <img
+                src="https://placehold.jp/600x300.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <p class="mt-1 font-bold text-center">{item.caption}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

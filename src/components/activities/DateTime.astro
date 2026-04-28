@@ -1,0 +1,39 @@
+---
+import "@styles/activities/date-time.css";
+import Heading from "@components/common/Heading.astro";
+
+type Item = {
+  name: string;
+  text: string;
+};
+const items: Item[] = [
+  {
+    name: "火、水、金",
+    text: "16:00〜18:30",
+  },
+  {
+    name: "土",
+    text: "9:00〜13:00",
+  },
+  {
+    name: "日",
+    text: "9:00〜12:00",
+  },
+];
+---
+
+<section>
+  <Heading>活動日時</Heading>
+  <div class="mt-4">
+    <dl class="activities-date-time-items">
+      {
+        items.map((item) => (
+          <div class="activities-date-time-item">
+            <dt class="activities-date-time-item__name">{item.name}</dt>
+            <dd>{item.text}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>

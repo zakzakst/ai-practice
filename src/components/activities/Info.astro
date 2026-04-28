@@ -1,0 +1,43 @@
+---
+import "@styles/activities/info.css";
+import Heading from "@components/common/Heading.astro";
+
+type Item = {
+  name: string;
+  text: string;
+};
+const items: Item[] = [
+  {
+    name: "学校名",
+    text: "県立千村高等学校",
+  },
+  {
+    name: "部名",
+    text: "バスケットボール部",
+  },
+  {
+    name: "活動場所",
+    text: "第一体育館",
+  },
+  {
+    name: "部員数",
+    text: "7名（選手6名・マネージャー1名）",
+  },
+];
+---
+
+<section>
+  <Heading>基本情報</Heading>
+  <div class="mt-4">
+    <dl class="activities-info-items">
+      {
+        items.map((item) => (
+          <div class="activities-info-item">
+            <dt class="activities-info-item__name">{item.name}</dt>
+            <dd>{item.text}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>

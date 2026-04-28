@@ -1,0 +1,23 @@
+.activities-info-items {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.activities-info-item {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 2;
+  align-items: center;
+  gap: 16px;
+  padding-block: 12px;
+  border-bottom: 1px solid #888;
+}
+
+.activities-info-item__name {
+  background-color: var(--black);
+  color: var(--white);
+  padding-inline: 8px;
+  font-size: 14px;
+  text-align: center;
+  text-align-last: justify;
+}
