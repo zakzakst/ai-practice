@@ -2,21 +2,24 @@
   position: relative;
   padding-block: 48px;
   text-align: justify;
+
   &::before,
   &::after {
     position: absolute;
     font-size: 72px;
-    color: #888;
     line-height: 1;
+    color: #888;
   }
+
   &::before {
-    content: "“";
     top: 0;
     left: 0;
+    content: "“";
   }
+
   &::after {
-    content: "”";
-    bottom: -24px;
     right: 0;
+    bottom: -24px;
+    content: "”";
   }
 }

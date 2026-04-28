@@ -7,28 +7,29 @@
 .contact-flow-item {
   position: relative;
   padding-top: 12px;
+
   & + .contact-flow-item::before {
-    content: "";
     position: absolute;
+    top: 60px;
+    left: -32px;
     display: block;
     width: 20px;
     height: 24px;
+    content: "";
     background-color: var(--primary);
-    top: 60px;
-    left: -32px;
     clip-path: polygon(0 0, 100% 50%, 0 100%);
   }
 }
 
 .contact-flow-item__head {
   position: relative;
-  background-color: #eee;
-  width: 120px;
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  margin-inline: auto;
   display: grid;
   place-content: center;
+  width: 120px;
+  aspect-ratio: 1 / 1;
+  margin-inline: auto;
+  background-color: #eee;
+  border-radius: 50%;
 }
 
 .contact-flow-item__num {
@@ -39,11 +40,11 @@
   place-content: center;
   width: 32px;
   aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  background-color: var(--primary);
-  color: var(--white);
   margin-inline: auto;
   font-weight: bold;
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 50%;
 }
 
 .contact-flow-item__img {

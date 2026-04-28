@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import url("tailwindcss");
 
 @layer base {
   :root {
@@ -17,6 +17,7 @@ body {
 }
 
 /* NOTE: tailwindに反映させる場合の書き方（今回はgridなどレイアウト周りのユーティリティスタイルとして利用するので不要だが、知識としてメモ） */
+
 /* @theme {
   --text-color-primary: var(--primary);
 } */
