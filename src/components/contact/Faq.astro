@@ -1,19 +1,50 @@
 ---
 import "@styles/contact/faq.css";
 import Heading from "@components/common/Heading.astro";
+
+type Item = {
+  question: string;
+  answer: string;
+};
+const items: Item[] = [
+  {
+    question: "初心者でも入部できますか？",
+    answer: "はい、経験の有無に関わらず歓迎しています。",
+  },
+  {
+    question: "見学だけでも大丈夫ですか？",
+    answer: "はい、まずは見学だけでも問題ありません。",
+  },
+  {
+    question: "活動場所はどこですか？",
+    answer: "第一体育館です。",
+  },
+  {
+    question: "活動日はいつですか？",
+    answer: "火・水・金・土・日です。",
+  },
+];
 ---
 
 <section>
   <Heading>よくある質問</Heading>
+  <div class="mt-4">
+    <ul class="contact-faq-items">
+      {
+        items.map((item) => (
+          <li class="contact-faq-item">
+            {/* TODO: 時間ある時details, summaryタグを使ったマークアップやってみたい */}
+            <div class="contact-faq-item__question">
+              <div class="contact-faq-item__question-icon">Q</div>
+              <div class="contact-faq-item__question-text">{item.question}</div>
+            </div>
+            <div class="contact-faq-item__answer">
+              <div class="contact-faq-item__answer-icon">A</div>
+              <div class="contact-faq-item__answer-text">{item.answer}</div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </section>
-
-<!--
-- Q: 初心者でも入部できますか？
-  A: はい、経験の有無に関わらず歓迎しています。
-- Q: 見学だけでも大丈夫ですか？
-  A: はい、まずは見学だけでも問題ありません。
-- Q: 活動場所はどこですか？
-  A: 第一体育館です。
-- Q: 活動日はいつですか？
-  A: 火・水・金・土・日です。
--->

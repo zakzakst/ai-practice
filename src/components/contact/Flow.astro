@@ -1,16 +1,66 @@
 ---
 import "@styles/contact/flow.css";
 import Heading from "@components/common/Heading.astro";
+
+type Item = {
+  num: string;
+  name: string;
+  text: string;
+  // TODO: アイコン画像のパス入れる
+};
+const items: Item[] = [
+  {
+    num: "1",
+    name: "お問い合わせ",
+    text: "Googleフォームからお問い合わせください。",
+  },
+  {
+    num: "2",
+    name: "見学または体験参加",
+    text: "実際の練習に参加して、雰囲気を体験できます。",
+  },
+  {
+    num: "3",
+    name: "顧問または学校へ相談",
+    text: "活動内容や入部について、気軽にご相談ください。",
+  },
+  {
+    num: "4",
+    name: "入部手続き",
+    text: "必要書類の提出など、手続きを行います。",
+  },
+  {
+    num: "5",
+    name: "練習参加開始",
+    text: "チームの一員として、活動をスタート！",
+  },
+];
 ---
 
 <section>
   <Heading>入部までの流れ</Heading>
+  <div class="mt-4">
+    <ol class="contact-flow-items">
+      {
+        items.map((item) => (
+          <li class="contact-flow-item">
+            <div class="contact-flow-item__head">
+              <div class="contact-flow-item__num">{item.num}</div>
+              <div class="contact-flow-item__img">
+                <img
+                  src="https://placehold.jp/120x120.png"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="contact-flow-item__content">
+              <div class="contact-flow-item__name">{item.name}</div>
+              <div class="contact-flow-item__text">{item.text}</div>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
 </section>
-
-<!--
-- 01 お問い合わせ: Googleフォームからお問い合わせください。
-- 02 見学または体験参加: 実際の練習に参加して、雰囲気を体験できます。
-- 03 顧問または学校へ相談: 活動内容や入部について、気軽にご相談ください。
-- 04 入部手続き: 必要書類の提出など、手続きを行います。
-- 05 練習参加開始: チームの一員として、活動をスタート！
--->
