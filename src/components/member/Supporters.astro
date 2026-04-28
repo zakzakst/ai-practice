@@ -1,0 +1,59 @@
+---
+import "@styles/member/supporters.css";
+import Heading from "@components/common/Heading.astro";
+import { getBasePath } from "@lib/utils";
+
+type Item = {
+  name: string;
+  grade: string;
+  position: string;
+  text: string;
+  thumbnail: string;
+};
+const items: Item[] = [
+  {
+    name: "篠崎 紗耶",
+    grade: "2年",
+    position: "マネージャー",
+    text: "チーム全体の状態や空気を見ながら、選手を支える存在。冷静な視点と気配りで、日々の活動を支えている。",
+    thumbnail: "shinozaki.png",
+  },
+  {
+    name: "結城 恒一郎",
+    grade: "教諭",
+    position: "顧問",
+    text: "生徒一人ひとりの変化を丁寧に見守りながら、チームの成長を支える顧問。勝敗だけでなく、本気で取り組む姿勢を大切にしている。",
+    thumbnail: "yuki.png",
+  },
+];
+---
+
+<section>
+  <Heading>マネージャー・顧問</Heading>
+  <div class="mt-4">
+    <ul class="grid grid-cols-3 gap-y-8 gap-x-6">
+      {
+        items.map((item) => (
+          <li class="member-supporters-item">
+            <div>
+              <img
+                src={getBasePath(`/img/member/${item.thumbnail}`)}
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="member-supporters-item__body">
+              <div class="member-supporters-item__name">{item.name}</div>
+              <div class="member-supporters-item__data">
+                <div>
+                  {item.grade} ／ {item.position}
+                </div>
+                <div class="member-supporters-item__text">{item.text}</div>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

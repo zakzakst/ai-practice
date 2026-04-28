@@ -1,0 +1,108 @@
+---
+import "@styles/member/players.css";
+import Heading from "@components/common/Heading.astro";
+import { getBasePath } from "@lib/utils";
+
+type Item = {
+  name: string;
+  grade: string;
+  position: string;
+  height: number;
+  play: string;
+  text: string;
+  thumbnail: string;
+};
+const items: Item[] = [
+  {
+    name: "成瀬 太",
+    grade: "3年",
+    position: "スモールフォワード",
+    height: 179,
+    play: "ミドルレンジ、ヘルプディフェンス、冷静な判断",
+    text: "試合の流れを落ち着かせる上級生。攻守のバランス感覚でチームを支える。",
+    thumbnail: "naruse.png",
+  },
+  {
+    name: "朝倉 湊",
+    grade: "2年",
+    position: "ポイントガード",
+    height: 176,
+    play: "ゲームメイク、テンポを変えるドリブル、パス",
+    text: "チームのテンポをつくるガード。状況を見ながら判断し、全体を動かす役割を担う。",
+    thumbnail: "asakura.png",
+  },
+  {
+    name: "黒田 大地",
+    grade: "2年",
+    position: "センター",
+    height: 186,
+    play: "ボックスアウト、リバウンド、スクリーン",
+    text: "ゴール下で体を張り、守備とリバウンドでチームを支える存在。",
+    thumbnail: "kuroda.png",
+  },
+  {
+    name: "三宅 陸",
+    grade: "2年",
+    position: "パワーフォワード",
+    height: 181,
+    play: "ルーズボール、走り込み、守備での声かけ",
+    text: "ハードワークと声でチームを引っ張る、聖南高校らしさを体現する選手。",
+    thumbnail: "miyake.png",
+  },
+  {
+    name: "白石 恒一",
+    grade: "1年",
+    position: "シューティングガード",
+    height: 171,
+    play: "キャッチアンドシュート、速攻、ドライブ",
+    text: "思い切りの良さが魅力の1年生。勢いをもたらすプレーで流れを変える。",
+    thumbnail: "shiraishi.png",
+  },
+  {
+    name: "宮本 透",
+    grade: "1年",
+    position: "ガード",
+    height: 168,
+    play: "プレッシャーディフェンス、安定したパス回し",
+    text: "粘り強い守備と落ち着いた判断で、試合の流れを整える役割を担う。",
+    thumbnail: "miyamoto.png",
+  },
+];
+---
+
+<section>
+  <Heading>選手</Heading>
+  <div class="mt-4">
+    <ul class="grid grid-cols-3 gap-y-8 gap-x-6">
+      {
+        items.map((item) => (
+          <li class="member-players-item">
+            <div class="member-players-item__body">
+              <div>
+                <img
+                  src={getBasePath(`/img/member/${item.thumbnail}`)}
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <div class="member-players-item__name">{item.name}</div>
+                <div class="member-players-item__data">
+                  <div>
+                    {item.grade} ／ {item.position}
+                  </div>
+                  <div>{item.height}cm</div>
+                  <div class="member-players-item__play-heading">
+                    得意なプレー
+                  </div>
+                  <div>{item.play}</div>
+                </div>
+              </div>
+            </div>
+            <div class="member-players-item__text">{item.text}</div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
