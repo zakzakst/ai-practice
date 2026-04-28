@@ -1,6 +1,7 @@
 .member-message__wrapper {
   position: relative;
   padding-block: 48px;
+  text-align: justify;
   &::before,
   &::after {
     position: absolute;

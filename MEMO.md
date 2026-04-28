@@ -10,6 +10,9 @@
 - ボタンやリンクのインタラクション
 - buildしたファイルに対してHTMLの文法とかアクセシビリティをチェックするやつ追加（htmllintだっけ？）
 - ヘッダーのアクティブ、current page
+- imgタグのwidth, height
+- 記事一覧
+  - https://zenn.dev/fus1ondev/articles/astro-markdown#記事一覧ページを作るには
 
 ## 次やってみたい
 

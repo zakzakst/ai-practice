@@ -1,0 +1,40 @@
+---
+import "@styles/global.css";
+import Header from "@components/common/Header.astro";
+import Footer from "@components/common/Footer.astro";
+import ArticleHero from "@components/common/ArticleHero.astro";
+import Container from "@components/common/Container.astro";
+import { getBasePath } from "@lib/utils";
+
+const { title, description, heroImage } = Astro.props.frontmatter;
+const SiteName = "サイト名";
+const SiteDescription = "サイトの概要";
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href={getBasePath("/favicon.svg")} />
+    <link rel="icon" href={getBasePath("/favicon.ico")} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description || SiteDescription} />
+    <title>{`${title}：${SiteName}`}</title>
+  </head>
+  <body class="grid grid-rows-[max-content_1fr_max-content] min-h-screen">
+    <Header />
+    <main>
+      <Container>
+        <ArticleHero
+          heroImage={heroImage ? getBasePath(heroImage) : undefined}
+        />
+        <div class="py-6">
+          <!-- TODO: マークダウン用のスタイル -->
+          <slot />
+        </div>
+      </Container>
+    </main>
+    <Footer />
+  </body>
+</html>
