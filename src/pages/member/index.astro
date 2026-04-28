@@ -1,0 +1,32 @@
+---
+import Layout from "@layouts/Default.astro";
+import Hero from "@components/common/Hero.astro";
+import Container from "@components/common/Container.astro";
+import JoinUs from "@components/common/JoinUs.astro";
+
+import Players from "@components/member/Players.astro";
+import Supporters from "@components/member/Supporters.astro";
+import Message from "@components/member/Message.astro";
+---
+
+<Layout title="メンバー紹介ページ" description="これはメンバー紹介ページです">
+  <Hero
+    title="メンバー紹介"
+    titleEn="MEMBER"
+    description="共に戦い、共に成長する仲間たちを紹介します"
+  />
+  <div class="py-12">
+    <Container>
+      <Players />
+    </Container>
+    <Container className="mt-12">
+      <Supporters />
+    </Container>
+    <Container className="mt-12">
+      <Message />
+    </Container>
+    <Container className="mt-12">
+      <JoinUs />
+    </Container>
+  </div>
+</Layout>
