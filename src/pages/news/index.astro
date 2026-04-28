@@ -1,0 +1,28 @@
+---
+import Layout from "@layouts/Default.astro";
+import Hero from "@components/common/Hero.astro";
+import Container from "@components/common/Container.astro";
+import JoinUs from "@components/common/JoinUs.astro";
+
+import News from "@components/news/News.astro";
+import Achievement from "@components/news/Achievement.astro";
+---
+
+<Layout title="ニュース・実績" description="これはニュース・実績ページです">
+  <Hero
+    title="ニュース・実績"
+    titleEn="CONTACT"
+    description="日々の活動や大会結果を随時更新しています"
+  />
+  <div class="py-12">
+    <Container>
+      <News />
+    </Container>
+    <Container className="mt-12">
+      <Achievement />
+    </Container>
+    <Container className="mt-12">
+      <JoinUs />
+    </Container>
+  </div>
+</Layout>

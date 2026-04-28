@@ -1,0 +1,33 @@
+.news-achievement-item {
+  padding: 16px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.news-achievement-item__img {
+  width: 80px;
+  aspect-ratio: 1 / 1;
+  background-color: var(--primary);
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.news-achievement-item__date {
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.news-achievement-item__name {
+  font-weight: bold;
+}
+
+.news-achievement-item__text {
+  font-size: 14px;
+}

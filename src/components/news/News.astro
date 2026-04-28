@@ -1,0 +1,71 @@
+---
+import "@styles/news/news.css";
+import Heading from "@components/common/Heading.astro";
+import { getBasePath } from "@lib/utils";
+
+type Item = {
+  id: number;
+  date: string;
+  category: string;
+  title: string;
+};
+const items: Item[] = [
+  {
+    id: 1,
+    date: "2026.04.20",
+    category: "お知らせ",
+    title: "新入生勧誘を開始しました",
+  },
+  {
+    id: 2,
+    date: "2026.04.10",
+    category: "お知らせ",
+    title: "サイト公開準備中です",
+  },
+  {
+    id: 3,
+    date: "2026.05.08",
+    category: "お知らせ",
+    title: "体験参加の受付を開始予定です",
+  },
+  {
+    id: 4,
+    date: "2026.05.25",
+    category: "試合情報",
+    title: "地区交流試合に参加予定です",
+  },
+  {
+    id: 5,
+    date: "2026.06.05",
+    category: "大会情報",
+    title: "インターハイ予選に向けて調整中です",
+  },
+  {
+    id: 6,
+    date: "2026.06.15",
+    category: "大会情報",
+    title: "大会日程・結果を掲載予定です",
+  },
+];
+---
+
+<section>
+  <Heading>ニュース一覧</Heading>
+  <div class="mt-4">
+    <ul class="news-news-items">
+      {
+        items.map((item) => (
+          <li class="news-news-item">
+            <div>{item.date}</div>
+            <div class="news-news-item__category">{item.category}</div>
+            <div class="news-news-item__title">{item.title}</div>
+            <a
+              href={getBasePath(`/news/${item.id}`)}
+              class="news-news-item__link"
+            />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
