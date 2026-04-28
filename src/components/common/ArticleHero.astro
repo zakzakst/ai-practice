@@ -1,16 +1,17 @@
 ---
+import "@styles/common/article-hero.css";
+
 interface Props {
   heroImage?: string;
 }
 const { heroImage } = Astro.props;
 ---
 
-<div>
+<div class="article-hero">
   <!-- TODO: 画角制御 -->
   <img
     src={heroImage || "https://placehold.jp/800x240.png"}
     alt=""
     loading="lazy"
-    class="w-full"
   />
 </div>

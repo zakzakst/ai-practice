@@ -13,6 +13,7 @@
 - imgタグのwidth, height
 - 記事一覧
   - https://zenn.dev/fus1ondev/articles/astro-markdown#記事一覧ページを作るには
+- 画像圧縮
 
 ## 次やってみたい
 
