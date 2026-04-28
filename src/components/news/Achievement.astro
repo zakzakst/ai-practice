@@ -1,0 +1,54 @@
+---
+import "@styles/news/achievement.css";
+import Heading from "@components/common/Heading.astro";
+import type { map } from "astro:schema";
+
+type Item = {
+  date: string;
+  name: string;
+  text: string;
+};
+const items: Item[] = [
+  {
+    date: "2023年度（3年前）",
+    name: "県大会ベスト16",
+    text: "チーム一丸となり、県ベスト16入りを果たす。",
+  },
+  {
+    date: "2024年度（2年前）",
+    name: "地区予選 2回戦敗退",
+    text: "強豪校相手に善戦するも、あと一歩及ばず。",
+  },
+  {
+    date: "2025年度（前年）",
+    name: "地区予選 1回戦敗退",
+    text: "悔しい結果を糧に、基礎から見直しを実施。",
+  },
+];
+---
+
+<section>
+  <Heading>過去の主な実績</Heading>
+  <div class="mt-4">
+    <ul class="grid grid-cols-3 gap-4">
+      {
+        items.map((item) => (
+          <li class="news-achievement-item">
+            <div class="news-achievement-item__img">
+              <img
+                src="https://placehold.jp/160x160.png"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <div class="news-achievement-item__content">
+              <p class="news-achievement-item__date">{item.date}</p>
+              <p class="news-achievement-item__name">{item.name}</p>
+              <p class="news-achievement-item__text">{item.text}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

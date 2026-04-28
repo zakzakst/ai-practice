@@ -11,6 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint:prettier": "prettier . --write",
+    "hg:component": "hygen component with-prompt",
     "deploy": "gh-pages -d dist --nojekyll"
   },
   "dependencies": {
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "gh-pages": "^6.3.0",
+    "hygen": "^6.2.11",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.7.3"
