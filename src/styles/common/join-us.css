@@ -2,7 +2,8 @@
   position: relative;
   color: var(--white);
   background-color: var(--black);
-  background-image: url("https://placehold.jp/160x160.png");
+  /* TODO: basePathのハードコーディングやめたい */
+  background-image: url("/ai-practice/img/common/join-bg.webp");
   background-position: center;
   background-size: cover;
 }
