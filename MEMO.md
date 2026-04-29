@@ -2,11 +2,15 @@
 
 - stylelint作る
   - 調べる：node 24.1.0で動かなかった。22.17.0だと動いた
+  - @import "tailwindcss"; を @import url("tailwindcss");に変換してしまい、表示崩れした。避けたい（import-notationをnullにする？）
 - htmlhint
   - 調べる：作ったが、もうちょっとちゃんとルール設定調べる
 - astroファイルにprettier-plugin-tailwindcss / @trivago/prettier-plugin-sort-importsが効いていない（対応法なさそうであればパッケージをアンインストールする）
   - 下記みるとできるはず？（現状できていない）
   - https://zenn.dev/k_neko3/articles/008e09ffd23907#prettier-plugin-tailwindcssが機能するようになってた
+- 画像圧縮, webp
+  - 調べる：作ったが、メンテナンスされてないパッケージがあるみたいなので新しい方法調べる
+- js作成時にeslintも
 - レスポンシブ対応
 - FAQアコーディオン化
 - スクロール後にヘッダーにシャドウ追加
