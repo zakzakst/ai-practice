@@ -9,7 +9,6 @@
   width: 80px;
   aspect-ratio: 1 / 1;
   margin-inline: auto;
-  background-color: var(--primary);
 
   & > img {
     width: 100%;

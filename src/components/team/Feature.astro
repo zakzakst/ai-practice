@@ -1,25 +1,31 @@
 ---
 import "@styles/team/feature.css";
 import Heading from "@components/common/Heading.astro";
+import { getBasePath } from "@lib/utils";
 
 type Item = {
+  icon: string;
   name: string;
   text: string;
 };
 const items: Item[] = [
   {
+    icon: "feature-01",
     name: "基本を大切にする",
     text: "基礎を積み重ね、試合で発揮できる力を身につけます。",
   },
   {
+    icon: "feature-02",
     name: "守備と連携を重視する",
     text: "チーム全体で守り、つながり、流れをつくります。",
   },
   {
+    icon: "feature-03",
     name: "少人数でも全員で戦う",
     text: "人数に関係なく、全員が主役として戦います。",
   },
   {
+    icon: "feature-04",
     name: "一人ひとりが複数の役割を担う",
     text: "様々な役割を経験し、チームの力を高めていきます。",
   },
@@ -33,7 +39,11 @@ const items: Item[] = [
       items.map((item) => (
         <li class="team-feature-item">
           <div class="team-feature-item__img">
-            <img src="https://placehold.jp/160x160.png" alt="" loading="lazy" />
+            <img
+              src={getBasePath(`/img/team/${item.icon}.webp`)}
+              alt=""
+              loading="lazy"
+            />
           </div>
           <p class="team-feature-item__name">{item.name}</p>
           <p class="team-feature-item__text">{item.text}</p>
