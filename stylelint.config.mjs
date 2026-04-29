@@ -5,5 +5,8 @@ export default {
     "selector-class-pattern": null,
     "keyframes-name-pattern": null,
     "no-descending-specificity": null,
+    "color-hex-length": "short",
+    "no-duplicate-selectors": null,
+    "no-empty-source": null,
   },
 };
