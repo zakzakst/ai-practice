@@ -1,7 +1,7 @@
 // 参考：https://qiita.com/taqumo/items/60de0af9699415150035
 import c from "ansi-colors";
-import fs from "fs";
 import log from "fancy-log";
+import fs from "fs";
 import globule from "globule";
 import sharp from "sharp";
 
