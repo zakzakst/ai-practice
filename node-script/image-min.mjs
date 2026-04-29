@@ -1,8 +1,8 @@
+import imageminGifsicle from "imagemin-gifsicle";
 import imagemin from "imagemin-keep-folder";
+import imageminMozjpeg from "imagemin-mozjpeg";
 import imageminPngquant from "imagemin-pngquant";
 import imageminSvgo from "imagemin-svgo";
-import imageminMozjpeg from "imagemin-mozjpeg";
-import imageminGifsicle from "imagemin-gifsicle";
 
 const srcDir = "./public/img/";
 const outDir = "./public/img/";

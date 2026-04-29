@@ -1,7 +1,15 @@
 ---
 import Layout from "@layouts/Default.astro";
+
+import Hero from "@components/top/Hero.astro";
+import Team from "@components/top/Team.astro";
+import Activities from "@components/top/Activities.astro";
+import Member from "@components/top/Member.astro";
 ---
 
 <Layout title="トップページ" description="これはトップページです">
-  <div class="font-bold text-2xl text-primary">トップページ</div>
+  <Hero />
+  <Team />
+  <Activities />
+  <Member />
 </Layout>
