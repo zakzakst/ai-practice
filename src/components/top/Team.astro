@@ -1,15 +1,61 @@
 ---
 import "@styles/top/team.css";
 import Button from "@components/common/Button.astro";
+import Heading from "@components/top/Heading.astro";
 import { getBasePath } from "@lib/utils";
+
+type Item = {
+  num: string;
+  text: string;
+};
+const items: Item[] = [
+  {
+    num: "01",
+    text: "本気がある者が勝つ",
+  },
+  {
+    num: "02",
+    text: "乗って広げる",
+  },
+  {
+    num: "03",
+    text: "空間をやりきる",
+  },
+];
 ---
 
-<div><Button href={getBasePath("/contact")}>TEAM</Button></div>
-
-<!--
-- 個に頼らず、全員で戦う。
-- 聖心学園バスケットボール部は、「体を鍛えること」「技術を磨くこと」はもちろん、人として成長することを大切にしています。チーム一丸となり、日々の練習に全力で取り組み、応援されるチームを目指しています。
-- VALUE 01: 本気がある者が勝つ
-- VALUE 02: 乗って広げる
-- VALUE 03: 空間をやりきる
--->
+<div class="grid grid-cols-2 gap-12 items-center">
+  <div>
+    <Heading subText="TEAM">個に頼らず、<br />全員で戦う。</Heading>
+    <div class="ml-4">
+      <p class="mt-4">
+        聖心学園バスケットボール部は、「体を鍛えること」「技術を磨くこと」はもちろん、人として成長することを大切にしています。
+      </p>
+      <p class="mt-2">
+        チーム一丸となり、日々の練習に全力で取り組み、応援されるチームを目指しています。
+      </p>
+      <div class="mt-6">
+        <Button href={getBasePath("/team")}>チーム紹介</Button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <ul class="top-team-items">
+      {
+        items.map((item) => (
+          <li class="top-team-item">
+            <div class="top-team-item__content">
+              <div class="top-team-item__num">VALUE {item.num}</div>
+              <div class="top-team-item__text">{item.text}</div>
+            </div>
+            <div class="top-team-item__img">
+              <div class="top-team-item__img-inner">
+                <img src="https://placehold.jp/160x160.png" alt="" />
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

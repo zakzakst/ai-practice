@@ -1,0 +1,16 @@
+.top-heading {
+  transform: skew(-10deg);
+  transform-origin: left bottom;
+}
+
+.top-heading-sub {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.top-heading-main {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.1;
+}

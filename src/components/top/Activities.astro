@@ -1,13 +1,24 @@
 ---
 import "@styles/top/activities.css";
 import Button from "@components/common/Button.astro";
+import Heading from "@components/top/Heading.astro";
 import { getBasePath } from "@lib/utils";
 ---
 
-<div><Button href={getBasePath("/contact")}>ACTIVITIES</Button></div>
-
-<!--
-- 日々の練習を大切に。
-- スケジュールに沿って、基礎力・実践力・チームワークを高める練習を行っています。
-- 目標に向かって、計画的に取り組み、成長し続けます。
--->
+<div class="grid grid-cols-2 gap-12 items-center">
+  <div>
+    <img src="https://placehold.jp/600x300.png" alt="" loading="lazy" />
+  </div>
+  <div>
+    <Heading subText="ACTIVITIES">日々の練習を<br />大切に。</Heading>
+    <div class="ml-4">
+      <p class="mt-4">
+        スケジュールに沿って、基礎力・実践力・チームワークを高める練習を行っています。
+      </p>
+      <p class="mt-2">目標に向かって、計画的に取り組み、成長し続けます。</p>
+      <div class="mt-6">
+        <Button href={getBasePath("/activities")}>活動情報</Button>
+      </div>
+    </div>
+  </div>
+</div>

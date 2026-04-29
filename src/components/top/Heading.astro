@@ -1,0 +1,13 @@
+---
+import "@styles/top/heading.css";
+
+interface Props {
+  subText: string;
+}
+const { subText } = Astro.props;
+---
+
+<hgroup class="top-heading">
+  <p class="top-heading-sub">{subText}</p>
+  <h2 class="top-heading-main"><slot /></h2>
+</hgroup>

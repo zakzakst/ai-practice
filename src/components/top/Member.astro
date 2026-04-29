@@ -1,16 +1,27 @@
 ---
 import "@styles/top/member.css";
 import Button from "@components/common/Button.astro";
+import Heading from "@components/top/Heading.astro";
 import { getBasePath } from "@lib/utils";
 ---
 
-<div><Button href={getBasePath("/contact")}>MEMBER</Button></div>
-
-<!--
-- 本気になれる場所を、探している人へ。
-- バスケットボールが好き、本気で強くなりたい。仲間と一緒に成長したい。そんなあなたを待っています。
-- チェックリスト:
-    - 全力で取り組む姿勢を大切に
-    - 互いに高め合い、支え合う
-    - 応援されるチームを目指す
--->
+<div class="grid grid-cols-2 gap-12 items-center">
+  <div>
+    <Heading subText="MEMBER"
+      >本気になれる場所を、<br />探している人へ。</Heading
+    >
+    <div class="ml-4">
+      <p class="mt-4">
+        バスケットボールが好き、本気で強くなりたい。仲間と一緒に成長したい。
+      </p>
+      <p class="mt-2">そんなあなたを待っています。</p>
+      <div class="mt-6 flex gap-4">
+        <Button href={getBasePath("/member")}>メンバー紹介</Button>
+        <Button href={getBasePath("/contact")}>入部案内・お問い合わせ</Button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <img src="https://placehold.jp/600x300.png" alt="" loading="lazy" />
+  </div>
+</div>
