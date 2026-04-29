@@ -1,0 +1,38 @@
+.top-hero-ticker {
+  width: 70vw;
+  overflow: hidden;
+  line-height: 1;
+  color: var(--white);
+  background-color: var(--black);
+  transform: skewX(-30deg);
+  transform-origin: left top;
+}
+
+.top-hero-ticker__inner {
+  padding-block: 16px;
+  transform: skewX(30deg);
+  transform-origin: left top;
+}
+
+.top-hero-ticker__text {
+  font-size: 20px;
+  white-space: nowrap;
+  animation: top-hero-ticker 5s linear infinite;
+
+  > span {
+    display: inline-block;
+    /* TODO: ハードコーディングやめたい */
+    /* TODO: 調べる。コメントしたらエラー出る。comment-empty-line-before: nullを設定しても消えない */
+    width: 640px;
+  }
+}
+
+@keyframes top-hero-ticker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-640px);
+  }
+}
