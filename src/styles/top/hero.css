@@ -17,7 +17,7 @@
 .top-hero-ticker__text {
   font-size: 20px;
   white-space: nowrap;
-  animation: top-hero-ticker 5s linear infinite;
+  animation: top-hero-ticker 10s linear infinite;
 
   > span {
     display: inline-block;
