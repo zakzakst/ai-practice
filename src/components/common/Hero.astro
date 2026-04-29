@@ -1,15 +1,15 @@
 ---
 import "@styles/common/hero.css";
 import Container from "@components/common/Container.astro";
+import { getBasePath } from "@lib/utils";
 
 interface Props {
   title: string;
   titleEn: string;
   description: string;
-  // TODO: 背景画像のパス
-  // bgPath: string;
+  bgPath?: string;
 }
-const { title, titleEn, description } = Astro.props;
+const { title, titleEn, description, bgPath } = Astro.props;
 ---
 
 <div class="hero">
@@ -23,6 +23,10 @@ const { title, titleEn, description } = Astro.props;
     </div>
   </Container>
   <div class="hero-bg">
-    <img src="https://placehold.jp/2000x480.png" alt="" loading="lazy" />
+    <img
+      src={bgPath ? getBasePath(bgPath) : "https://placehold.jp/2000x480.png"}
+      alt=""
+      loading="lazy"
+    />
   </div>
 </div>

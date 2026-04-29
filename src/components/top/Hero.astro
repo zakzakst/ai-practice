@@ -1,15 +1,22 @@
 ---
 import "@styles/top/hero.css";
+import Container from "@components/common/Container.astro";
+
+const tickerText = "SMALL TEAM. FULL SPRINT. FULL VOICE. FULL COMMITMENT.";
 ---
 
-<div>hero</div>
+<Container>
+  <img src="https://placehold.jp/1600x900.png" alt="" loading="lazy" />
+</Container>
 
-<!--
-- SEISIN HIGH SCHOOL BASKETBALL CLUB
-- RUN. DEFEND. CONNECT.
-- 走る。守る。つなぐ。
-- 一人では勝てない。だからこそ、仲間とつながり、全員でゴールを目指す。
-
-## サブメッセージ（バナー）
-- SMALL TEAM. FULL SPRINT. FULL VOICE. FULL COMMITMENT.
--->
+<div class="top-hero-ticker">
+  <div class="top-hero-ticker__inner">
+    <p class="top-hero-ticker__text">
+      {
+        Array(4)
+          .fill(null)
+          .map(() => <span>{tickerText}</span>)
+      }
+    </p>
+  </div>
+</div>
