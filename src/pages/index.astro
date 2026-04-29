@@ -1,5 +1,7 @@
 ---
 import Layout from "@layouts/Default.astro";
+import Container from "@components/common/Container.astro";
+import JoinUs from "@components/common/JoinUs.astro";
 
 import Hero from "@components/top/Hero.astro";
 import Team from "@components/top/Team.astro";
@@ -9,7 +11,18 @@ import Member from "@components/top/Member.astro";
 
 <Layout title="トップページ" description="これはトップページです">
   <Hero />
-  <Team />
-  <Activities />
-  <Member />
+  <div class="py-12">
+    <Container>
+      <Team />
+    </Container>
+    <Container className="mt-16">
+      <Activities />
+    </Container>
+    <Container className="mt-16">
+      <Member />
+    </Container>
+    <Container className="mt-16">
+      <JoinUs />
+    </Container>
+  </div>
 </Layout>
