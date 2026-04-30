@@ -8,7 +8,7 @@
     position: absolute;
     font-size: 72px;
     line-height: 1;
-    color: #888;
+    color: var(--border);
   }
 
   &::before {

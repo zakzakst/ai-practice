@@ -11,14 +11,14 @@
   gap: 16px;
   align-items: center;
   padding-block: 16px;
-  border-bottom: 1px solid #888;
+  border-bottom: 1px solid var(--border);
 }
 
 .news-news-item__category {
   padding: 4px 12px;
   font-size: 14px;
   text-align: center;
-  background-color: #eee;
+  background-color: var(--gray-bg);
   border-radius: 9999px;
 }
 

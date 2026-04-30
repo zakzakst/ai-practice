@@ -68,7 +68,7 @@
   gap: 16px;
   align-items: center;
   padding: 8px;
-  border: 1px solid #888;
+  border: 1px solid var(--border);
   border-radius: 9999px;
 }
 

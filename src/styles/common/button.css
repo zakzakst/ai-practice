@@ -14,7 +14,7 @@
     display: block;
     width: 16px;
     content: "";
-    background-color: var(--black);
+    background-color: var(--primary-light);
   }
 
   &::before {

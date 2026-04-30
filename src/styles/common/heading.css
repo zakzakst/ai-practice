@@ -25,7 +25,7 @@
 
   &::before {
     right: -6px;
-    background-color: #000;
+    background-color: var(--primary-light);
   }
 
   &::after {
