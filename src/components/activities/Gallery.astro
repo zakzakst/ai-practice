@@ -1,18 +1,23 @@
 ---
 import "@styles/activities/gallery.css";
 import Heading from "@components/common/Heading.astro";
+import { getBasePath } from "@lib/utils";
 
 type Item = {
+  thumbnail: string;
   caption: string;
 };
 const items: Item[] = [
   {
+    thumbnail: "gallery-01",
     caption: "練習メニューの様子",
   },
   {
+    thumbnail: "gallery-02",
     caption: "体育館での活動風景",
   },
   {
+    thumbnail: "gallery-03",
     caption: "練習試合の様子",
   },
 ];
@@ -27,7 +32,7 @@ const items: Item[] = [
           <li>
             <div>
               <img
-                src="https://placehold.jp/600x300.png"
+                src={getBasePath(`/img/activities/${item.thumbnail}.webp`)}
                 alt=""
                 loading="lazy"
               />
