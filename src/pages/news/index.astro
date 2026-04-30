@@ -6,6 +6,23 @@ import JoinUs from "@components/common/JoinUs.astro";
 
 import News from "@components/news/News.astro";
 import Achievement from "@components/news/Achievement.astro";
+
+type Item = {
+  id: number;
+  date: string;
+  category: string;
+  title: string;
+};
+
+const allPosts = Object.values(
+  import.meta.glob("./posts/*.md", { eager: true }),
+);
+const items: Item[] = allPosts.map((post: any) => ({
+  id: post.frontmatter.id,
+  date: post.frontmatter.date,
+  category: post.frontmatter.category,
+  title: post.frontmatter.title,
+}));
 ---
 
 <Layout title="ニュース・実績" description="これはニュース・実績ページです">
@@ -17,7 +34,7 @@ import Achievement from "@components/news/Achievement.astro";
   />
   <div class="py-12">
     <Container>
-      <News />
+      <News items={items} />
     </Container>
     <Container className="mt-12">
       <Achievement />

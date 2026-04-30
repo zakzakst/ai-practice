@@ -19,8 +19,6 @@
 - ボタンやリンクのインタラクション
 - ヘッダーのアクティブ、current page
 - imgタグのwidth, height
-- 記事一覧
-  - https://zenn.dev/fus1ondev/articles/astro-markdown#記事一覧ページを作るには
 
 ## 次やってみたい
 
@@ -29,6 +27,7 @@
 ## 参考
 
 - https://namaemaker.net/archives/school-name.html
+- https://docs.astro.build/ja/tutorial/5-astro-api/1/
 
 ## 画像生成メモ
 
