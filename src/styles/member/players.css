@@ -30,7 +30,7 @@
 .member-players-item__data {
   padding-top: 12px;
   margin-top: 12px;
-  border-top: 1px dotted #888;
+  border-top: 1px solid var(--border);
 }
 
 .member-players-item__play-heading {
@@ -44,5 +44,5 @@
   padding: 12px;
   margin-top: 12px;
   font-size: 14px;
-  background-color: #f8f8f8;
+  background-color: var(--gray-bg);
 }
