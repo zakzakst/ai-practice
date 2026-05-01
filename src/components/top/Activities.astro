@@ -7,7 +7,11 @@ import { getBasePath } from "@lib/utils";
 
 <div class="grid grid-cols-1 md:grid-cols-[400px_1fr] gap-12 items-center">
   <div>
-    <img src="https://placehold.jp/600x300.png" alt="" loading="lazy" />
+    <img
+      src={getBasePath("/img/top/activities-img.png")}
+      alt=""
+      loading="lazy"
+    />
   </div>
   <div>
     <Heading subText="ACTIVITIES">日々の練習を<br />大切に。</Heading>

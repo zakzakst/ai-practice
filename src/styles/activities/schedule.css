@@ -29,6 +29,22 @@
     background-color: var(--black);
     clip-path: polygon(0 0, 100% 0, 50% 100%);
   }
+
+  @media (width < 48rem) {
+    grid-template-columns: repeat(1, 100%);
+    padding-bottom: 0;
+    padding-left: 48px;
+
+    &::before {
+      right: auto;
+      left: 25px;
+    }
+
+    &::after {
+      right: auto;
+      left: 16px;
+    }
+  }
 }
 
 .activities-schedule-item {
@@ -61,6 +77,29 @@
       left: 100%;
     }
   }
+
+  @media (width < 48rem) {
+    &::after {
+      width: 24px;
+    }
+
+    &:nth-child(odd) {
+      &::after {
+        right: 100%;
+      }
+    }
+
+    &:nth-child(2n) {
+      top: 0;
+      align-items: center;
+      justify-content: start;
+
+      &::after {
+        right: 100%;
+        left: auto;
+      }
+    }
+  }
 }
 
 .activities-schedule-item__inner {
@@ -82,6 +121,12 @@
   .activities-schedule-item__inner {
     flex-direction: row-reverse;
     padding-left: 24px;
+
+    @media (width < 48rem) {
+      flex-direction: row;
+      padding-right: 24px;
+      padding-left: 8px;
+    }
   }
 }
 

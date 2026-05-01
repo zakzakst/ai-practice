@@ -45,5 +45,13 @@
       var(--white) 35%,
       transparent 70%
     );
+
+    @media (width < 48rem) {
+      background-image: linear-gradient(
+        120deg,
+        var(--white) 45%,
+        transparent 90%
+      );
+    }
   }
 }

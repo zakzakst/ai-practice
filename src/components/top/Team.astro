@@ -52,7 +52,10 @@ const items: Item[] = [
             </div>
             <div class="top-team-item__img">
               <div class="top-team-item__img-inner">
-                <img src="https://placehold.jp/160x160.png" alt="" />
+                <img
+                  src={getBasePath(`/img/top/team-${item.num}.webp`)}
+                  alt=""
+                />
               </div>
             </div>
           </li>
