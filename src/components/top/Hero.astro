@@ -2,7 +2,8 @@
 import "@styles/top/hero.css";
 import Container from "@components/common/Container.astro";
 
-const tickerText = "SMALL TEAM. FULL SPRINT. FULL VOICE. FULL COMMITMENT.";
+const tickerText =
+  "<span>SMALL <span>TEAM</span>. FULL <span>SPRINT</span>. FULL <span>VOICE</span>. FULL <span>COMMITMENT</span>.</span>";
 ---
 
 <Container>
@@ -15,7 +16,7 @@ const tickerText = "SMALL TEAM. FULL SPRINT. FULL VOICE. FULL COMMITMENT.";
       {
         Array(4)
           .fill(null)
-          .map(() => <span>{tickerText}</span>)
+          .map(() => <Fragment set:html={tickerText} />)
       }
     </p>
   </div>

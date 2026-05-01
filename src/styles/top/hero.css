@@ -16,6 +16,7 @@
 
 .top-hero-ticker__text {
   font-size: 20px;
+  font-weight: bold;
   white-space: nowrap;
   animation: top-hero-ticker 10s linear infinite;
 
@@ -24,6 +25,10 @@
     /* TODO: ハードコーディングやめたい */
     /* TODO: 調べる。コメントしたらエラー出る。comment-empty-line-before: nullを設定しても消えない */
     width: 640px;
+
+    > span {
+      color: var(--primary-light);
+    }
   }
 }
 

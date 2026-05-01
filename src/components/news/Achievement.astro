@@ -1,24 +1,29 @@
 ---
 import "@styles/news/achievement.css";
+import { getBasePath } from "@lib/utils";
 import Heading from "@components/common/Heading.astro";
 
 type Item = {
+  icon: string;
   date: string;
   name: string;
   text: string;
 };
 const items: Item[] = [
   {
+    icon: "achievement-01",
     date: "2023年度（3年前）",
     name: "県大会ベスト16",
     text: "チーム一丸となり、県ベスト16入りを果たす。",
   },
   {
+    icon: "achievement-02",
     date: "2024年度（2年前）",
     name: "地区予選 2回戦敗退",
     text: "強豪校相手に善戦するも、あと一歩及ばず。",
   },
   {
+    icon: "achievement-03",
     date: "2025年度（前年）",
     name: "地区予選 1回戦敗退",
     text: "悔しい結果を糧に、基礎から見直しを実施。",
@@ -35,7 +40,7 @@ const items: Item[] = [
           <li class="news-achievement-item">
             <div class="news-achievement-item__img">
               <img
-                src="https://placehold.jp/160x160.png"
+                src={getBasePath(`/img/news/${item.icon}.webp`)}
                 alt=""
                 loading="lazy"
               />

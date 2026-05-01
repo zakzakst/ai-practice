@@ -28,7 +28,8 @@
 
 .top-team-item__img {
   padding: 16px 24px 16px 48px;
-  background-color: var(--black);
+  /* background-color: var(--black); */
+  background-color: var(--primary-bg);
   transform: skew(-30deg);
   transform-origin: bottom left;
 }

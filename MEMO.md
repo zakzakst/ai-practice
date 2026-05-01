@@ -19,6 +19,8 @@
 - ボタンやリンクのインタラクション
 - ヘッダーのアクティブ、current page
 - imgタグのwidth, height
+- headingをh3固定でなく動的タグにする
+  - https://docs.astro.build/ja/reference/astro-syntax/#動的タグ
 
 ## 次やってみたい
 
