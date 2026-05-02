@@ -1,13 +1,17 @@
 ---
 import "@styles/top/hero.css";
 import Container from "@components/common/Container.astro";
+import { getBasePath } from "@lib/utils";
 
 const tickerText =
   "<span>SMALL <span>TEAM</span>. FULL <span>SPRINT</span>. FULL <span>VOICE</span>. FULL <span>COMMITMENT</span>.</span>";
 ---
 
-<Container>
-  <img src="https://placehold.jp/1600x900.png" alt="" loading="lazy" />
+<Container className="relative">
+  <img src={getBasePath("/img/top/hero-bg.png")} alt="" loading="lazy" />
+  <h1 class="top-hero-title">
+    <img src={getBasePath("/img/top/title.png")} alt="" loading="lazy" />
+  </h1>
 </Container>
 
 <div class="top-hero-ticker">
