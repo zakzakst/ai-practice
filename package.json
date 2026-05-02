@@ -19,6 +19,7 @@
     "deploy": "gh-pages -d dist --nojekyll"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.2.4",
     "astro": "^6.1.9",
     "github-markdown-css": "^5.9.0",
