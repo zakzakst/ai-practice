@@ -1,9 +1,15 @@
 ---
 import "@styles/common/heading.css";
+
+interface Props {
+  tag?: string;
+}
+const { tag } = Astro.props;
+const Tag = tag || "h3";
 ---
 
-<!-- TODO: タグをpropsとかで親コンポーネント側から指定する方法あるか調べる -->
-<h3 class="heading">
+<!-- TODO: tsエラーの解消方法調べる -->
+<Tag class="heading">
   <span class="heading__mark"></span>
   <slot />
-</h3>
+</Tag>
