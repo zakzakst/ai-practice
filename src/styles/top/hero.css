@@ -1,3 +1,13 @@
+.top-hero-title {
+  position: absolute;
+  inset-block: 0;
+  left: 5%;
+  display: grid;
+  place-content: center;
+  width: 40%;
+  margin-block: auto;
+}
+
 .top-hero-ticker {
   width: 70vw;
   overflow: hidden;

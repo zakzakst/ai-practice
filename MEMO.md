@@ -21,6 +21,8 @@
 - imgタグのwidth, height
 - headingをh3固定でなく動的タグにする
   - https://docs.astro.build/ja/reference/astro-syntax/#動的タグ
+- 背景が周りになじむよう、画像を延長するような指示は上手くできなかった
+  - 調べる：画像の端をぼかしたりして、周りとなじませるCSSとか利用シーンありそう？
 
 ## 次やってみたい
 
