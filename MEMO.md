@@ -24,7 +24,8 @@
   - マイクロインタラクション
   - 装飾を散らす
   - 角版画像のクリッピング表現
-- Astroでのstorybook利用
+- 下記エラー出るインストール時のミスかもしれないので、一旦保留
+  - https://qiita.com/kskwtnk/items/0a830907e63366155cc1
 
 ## 今回はやらない
 
@@ -40,6 +41,8 @@
   - 「テキストは変更しない」という指示を加えて改善案の出力依頼をしてみる
 - headingをh3固定でなく動的タグにする
   - https://docs.astro.build/ja/reference/astro-syntax/#動的タグ
+- Astroでのstorybook利用
+  - ドキュメント見た感じastroファイルはできなさそう（reactのファイルを利用すればできるとは思う）
 
 ## メモ
 
