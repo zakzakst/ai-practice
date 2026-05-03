@@ -22,6 +22,13 @@
       "yaml": false,
     },
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "biomejs.biome",
+  },
+  "extensions": {
+    "recommendations": [
+      "astro-build.astro-vscode",
+      "biomejs.biome",
+      "stylelint.vscode-stylelint"
+    ]
   },
 }
