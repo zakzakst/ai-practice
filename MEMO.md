@@ -1,3 +1,6 @@
+- https://docs.astro.build/ja/guides/typescript/#component-props
+- https://docs.astro.build/ja/guides/typescript/#component-props
+
 ## TODO
 
 - 画像圧縮, webp
