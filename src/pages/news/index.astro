@@ -14,7 +14,9 @@ type Item = {
   title: string;
 };
 
-const allPosts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
+const allPosts = Object.values(
+  import.meta.glob("./posts/*.md", { eager: true }),
+);
 const items: Item[] = allPosts.map((post: any) => ({
   id: post.frontmatter.id,
   date: post.frontmatter.date,

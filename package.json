@@ -10,6 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "astro:check": "astro check",
     "lint:prettier": "prettier . --write",
     "hg:component": "hygen component with-prompt",
     "style-lint": "stylelint --fix ./src/styles/**/*.css",
@@ -20,11 +21,13 @@
     "deploy": "gh-pages -d dist --nojekyll"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.9",
     "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.2.4",
     "astro": "^6.1.9",
     "github-markdown-css": "^5.9.0",
-    "tailwindcss": "^4.2.4"
+    "tailwindcss": "^4.2.4",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.14",

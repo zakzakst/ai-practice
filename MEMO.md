@@ -1,3 +1,6 @@
+- https://docs.astro.build/ja/guides/typescript/#component-props
+- https://docs.astro.build/ja/guides/typescript/#component-props
+
 ## TODO
 
 - 画像圧縮, webp
@@ -9,8 +12,16 @@
   - マイクロインタラクション
   - 装飾を散らす
   - 角版画像のクリッピング表現
+  - ディテールのニュアンス（アイコンのハンコ風、背景ベタの水彩絵の具・紙風、手書き）
 - 下記エラー出るインストール時のミスかもしれないので、一旦保留
   - https://qiita.com/kskwtnk/items/0a830907e63366155cc1
+- stylelint作る
+  - 調べる：node 24.1.0で動かなかった。22.17.0だと動いた
+  - @import "tailwindcss"; を @import url("tailwindcss");に変換してしまい、表示崩れした。避けたい（import-notationをnullにする？）
+  - 解決策見つけられなかった⇒VS Codeの拡張機能で対応（workspaceのrecommendに入れる）
+  - stylelint 16だったら動くっぽい
+    - https://github.com/zakzakst/storybook-parts/blob/main/package.json
+- prettierとbiome共存させる。ただ、biome使いたいのはsort-importsくらい。方針考える
 
 ## 今回はやらない
 
@@ -36,10 +47,6 @@
   - https://docs.astro.build/ja/reference/astro-syntax/#動的タグ
 - Astroでのstorybook利用
   - ドキュメント見た感じastroファイルはできなさそう（reactのファイルを利用すればできるとは思う）
-- stylelint作る
-  - 調べる：node 24.1.0で動かなかった。22.17.0だと動いた
-  - @import "tailwindcss"; を @import url("tailwindcss");に変換してしまい、表示崩れした。避けたい（import-notationをnullにする？）
-  - 解決策見つけられなかった⇒VS Codeの拡張機能で対応（workspaceのrecommendに入れる）
 - astroファイルにprettier-plugin-tailwindcss / @trivago/prettier-plugin-sort-importsが効いていない（対応法なさそうであればパッケージをアンインストールする）
   - 下記みるとできるはず？（現状できていない）
   - https://zenn.dev/k_neko3/articles/008e09ffd23907#prettier-plugin-tailwindcssが機能するようになってた

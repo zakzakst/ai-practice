@@ -4,16 +4,16 @@
   "vcs": {
     "enabled": true,
     "clientKind": "git",
-    "useIgnoreFile": true
+    "useIgnoreFile": true,
   },
   "files": {
-    "includes": ["src/**/*.astro", "src/**/*.css", "src/**/*.ts"]
+    "includes": ["src/**/*.astro", "src/**/*.css", "src/**/*.ts"],
   },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
     "indentWidth": 2,
-    "lineWidth": 100
+    // "lineWidth": 100,
   },
   "linter": {
     "enabled": true,
@@ -23,10 +23,10 @@
         "useSortedClasses": {
           "level": "on",
           "options": {
-            "attributes": ["class", "classList"]
+            "attributes": ["class", "classList"],
             // "functions": ["clsx", "cva", "tw", "tw.*"]
-          }
-        }
+          },
+        },
         // "recommended": true,
         // "useSortedClasses": "error"
         // "noExcessiveSelectorClasses": {
@@ -38,21 +38,21 @@
       },
 
       "suspicious": {
-        "noConsole": "error"
-      }
-    }
+        "noConsole": "error",
+      },
+    },
   },
   "javascript": {
     "formatter": {
-      "quoteStyle": "double"
-    }
+      "quoteStyle": "double",
+    },
   },
   "assist": {
     "enabled": true,
     "actions": {
       "source": {
-        "organizeImports": "on"
-      }
-    }
-  }
+        "organizeImports": "on",
+      },
+    },
+  },
 }

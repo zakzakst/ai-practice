@@ -22,7 +22,7 @@
       "yaml": false,
     },
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "biomejs.biome",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "extensions": {
     "recommendations": [

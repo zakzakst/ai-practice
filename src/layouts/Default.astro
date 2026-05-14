@@ -1,7 +1,6 @@
 ---
 import "@styles/global.css";
 import Footer from "@components/common/Footer.astro";
-// import "@scripts/layout";
 import Header from "@components/common/Header.astro";
 import { getBasePath } from "@lib/utils";
 
@@ -24,7 +23,11 @@ const SiteDescription = "サイトの概要";
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description || SiteDescription} />
     <title>{title ? `${title}：${SiteName}` : SiteName}</title>
-  </head>
+    <script>
+      import "@scripts/layout";
+    </script></head
+  >
+
   <body class="grid grid-rows-[max-content_1fr_max-content] min-h-screen">
     <Header />
     <main>
